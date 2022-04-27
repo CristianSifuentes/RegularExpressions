@@ -4,10 +4,16 @@
 
    * [Introduction to Regular Expressions
 ](#introduction-to-regular-expressions)
-      * [Places to program for data science](#places-to-program-for-data-science)
+      * [Todo lo que aprenderás sobre expresiones regulares](#places-to-program-for-data-science)
+      * [¿Qué son las expresiones regulares?](#places-to-program-for-data-science)
+      * [Aplicaciones de las expresiones regulares](#places-to-program-for-data-science)
+       * [Introducción al lenguaje de expresiones regulares](#places-to-program-for-data-science)      
    * [The language: characters, operators, and constructions
 ](#the-language-characters-operators-and-constructions
-)   
+)  
+      * [El caracter (.)](#places-to-program-for-data-science) 
+      * [Las clases predefinidas y construidas
+](#places-to-program-for-data-science) 
    * [Practical use of Regular Expressions
 ](#practical-use-of-regular-expressions
 )   
