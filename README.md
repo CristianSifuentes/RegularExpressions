@@ -4,10 +4,10 @@
 
    * [Introduction to Regular Expressions
 ](#introduction-to-regular-expressions)
-      * [Todo lo que aprenderás sobre expresiones regulares](#places-to-program-for-data-science)
-      * [¿Qué son las expresiones regulares?](#places-to-program-for-data-science)
-      * [Aplicaciones de las expresiones regulares](#places-to-program-for-data-science)
-       * [Introducción al lenguaje de expresiones regulares](#places-to-program-for-data-science)      
+      * [Everything you will learn about regular expressions](#everything-you-will-learn-about-regular-expressions)
+      * [What are regular expressions?](#what-are-regular-expressions)
+      * [Applications of regular expressions](#applications-of-regular-expressions)
+       * [Introduction to the regular expression language](#introduction-to-the-regular-expression-language)      
    * [The language: characters, operators, and constructions
 ](#the-language-characters-operators-and-constructions
 )  
