@@ -84,3 +84,23 @@
 
 
 
+Introduction to Regular Expressions
+============
+
+
+Everything you will learn about regular expressions
+-----------
+
+
+The language: characters, operators, and constructions
+============
+
+Practical use of Regular Expressions
+============
+
+
+Advanced uses in Regular Expressions
+============
+
+Regular Expressions in programming languages
+============
