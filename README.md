@@ -23,28 +23,64 @@
       * [Not (^), its use and its dangers
 ](#not-its-use-and-its-dangers)
       * [Challenge: Filtering out letters in phone numbers using negations
-](#Challenge: Filtering out letters in phone numbers using negations)
+](#challenge-filtering-out-letters-in-phone-numbers-using-negations)
       * [Beginning (^) and end of line ($)
-](#Beginning (^) and end of line ($))
-
-
-
-
-
-
-
-
-
+](#beginning-and-end-of-line)
 
 
    * [Practical use of Regular Expressions
 ](#practical-use-of-regular-expressions
 )   
-   * [Advanced uses in regular expressions
+      * [Logs
+](#logs) 
+      * [Phone
+](#phone) 
+      * [Urls
+](#urls) 
+      * [Emails
+](#emails) 
+      * [Locations
+](#locations) 
+      * [Names(?) Challenge
+](#names-challenge) 
+
+
+
+   * [Advanced uses in Regular Expressions
 ](#advanced-uses-in-regular-expressions
 )   
+      * [Search and replace
+](#search-and-replace) 
+
+
+
+
+
+
    * [Regular Expressions in programming languages
 ](#regular-expressions-in-programming-languages
 )   
+
+      * [Using REGEX to decompose GET queries
+](#using-REGEX-to-decompose-GET-queries) 
+      * [Project Explanation
+](#project-explanation) 
+      * [Perl
+](#perl) 
+      * [Php
+](#php) 
+      * [Using PHP in practice
+](#using-PHP-in-practice) 
+      * [Python
+](#python) 
+      * [Java
+](#java) 
+      * [Java Applied
+](#java-applied) 
+      * [JavaScript
+](#javascript) 
+      * [`grep` and `find` from console
+](#grep-and-find-from-console) 
+
 
 
