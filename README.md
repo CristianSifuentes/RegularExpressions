@@ -52,11 +52,6 @@
       * [Search and replace
 ](#search-and-replace) 
 
-
-
-
-
-
    * [Regular Expressions in programming languages
 ](#regular-expressions-in-programming-languages
 )   
@@ -91,16 +86,102 @@ Introduction to Regular Expressions
 Everything you will learn about regular expressions
 -----------
 
+What are regular expressions?
+-----------
+
+Applications of regular expressions
+-----------
+
+Introduction to the regular expression language
+-----------
+
 
 The language: characters, operators, and constructions
 ============
+
+The character .
+-----------
+
+Predefined and built classes
+-----------
+
+The delimiters: +, *, ?
+-----------
+
+
+Counters {1,4}
+-----------
+
+The case of (?) as a delimiter
+-----------
+
+Not (^), its use and its dangers
+-----------
+
+Challenge: Filtering out letters in phone numbers using negations
+-----------
+
+
+Beginning (^) and end of line ($)
+-----------
 
 Practical use of Regular Expressions
 ============
 
 
+Logs
+-----------
+Phone
+-----------
+Urls
+-----------
+Emails
+-----------
+Locations
+-----------
+Names(?) Challenge
+-----------
+
+
+
 Advanced uses in Regular Expressions
 ============
 
+Search and replace
+-----------
+
+
+
 Regular Expressions in programming languages
 ============
+
+Using REGEX to decompose GET queries
+-----------
+
+Project Explanation
+-----------
+
+
+Perl
+-----------
+
+Php
+-----------
+
+Using PHP in practice
+-----------
+
+Python
+-----------
+
+Java
+-----------
+
+Java Applied
+-----------
+
+JavaScript
+-----------
+
+grep and find from console
+-----------
