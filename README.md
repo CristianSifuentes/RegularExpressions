@@ -82,6 +82,19 @@
 Introduction to Regular Expressions
 ============
 
+Regular expressions express a language defined by a regular grammar that can be solved with a nondeterministic finite automaton (NFA), where the match is represented by the states.
+
+A regular grammar is the simplest grammar expressed by the Chomsky Hierarchy.
+
+img
+
+In a nutshell, a regular language is expressed visually so it can express an NFA, and here is a very simple example of an NFA:
+
+
+And the Regular Expression language is a textual representation of such an automaton. That last example is expressed by the following regex:
+
+
+Which matches any string starting with 0 or 1 , repeating 0 or more times, ending with 1 . In other words, it's a regular expression to match odd numbers from their binary representation.
 
 Everything you will learn about regular expressions
 -----------
