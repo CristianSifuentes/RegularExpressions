@@ -86,13 +86,17 @@ Regular expressions express a language defined by a regular grammar that can be 
 
 A regular grammar is the simplest grammar expressed by the Chomsky Hierarchy.
 
-img
+![Alt text](/img1.png?raw=true "img1")
 
 In a nutshell, a regular language is expressed visually so it can express an NFA, and here is a very simple example of an NFA:
 
+![Alt text](/img2.png?raw=true "img2")
 
 And the Regular Expression language is a textual representation of such an automaton. That last example is expressed by the following regex:
 
+```bash
+➥ ^[01]*1$
+```
 
 Which matches any string starting with 0 or 1 , repeating 0 or more times, ending with 1 . In other words, it's a regular expression to match odd numbers from their binary representation.
 
