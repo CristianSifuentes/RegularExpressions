@@ -103,8 +103,14 @@ Which matches any string starting with 0 or 1 , repeating 0 or more times, endin
 Everything you will learn about regular expressions
 -----------
 
+
+
 What are regular expressions?
 -----------
+
+Regular expressions are character patterns that allow you to select or discard data in a text file such as csv, or in a line or an input, depending on whether or not they match this pattern.
+
+
 
 Applications of regular expressions
 -----------
