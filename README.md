@@ -115,15 +115,31 @@ Regular expressions are character patterns that allow you to select or discard d
 Applications of regular expressions
 -----------
 
+Regular expressions allow us to build patterns, which we can apply to files, and search for relevant information in them, a practical case (among many others) would be, extract from an SD card, the photographs taken on a certain date, or the precise and concise search of files in computer forensics.
+
+
 Introduction to the regular expression language
 -----------
 
+/d -> Digit
+/w -> Letter
+
+* Shape
+* give repetition
 
 The language: characters, operators, and constructions
 ============
 
 The character .
 -----------
+
+The character (.)
+
+Text file. Series of character strings. A succession of lines.
+
+Character string. A character followed by another character, followed by another character.
+
+Character. Graphic representation in bits of some code, in most cases ASCII. It is the minimum unit that can be abstracted from a character string.
 
 Predefined and built classes
 -----------
