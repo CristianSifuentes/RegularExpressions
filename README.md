@@ -144,6 +144,18 @@ Character. Graphic representation in bits of some code, in most cases ASCII. It 
 Predefined and built classes
 -----------
 
+| Regex	 | What does this? | Description | Reverse |
+| --- | --- | --- | --- |
+| . | Character | Any character, select each of the characters |  |
+| /d | Digit| Digits: (lowercase d) Find all digits (number) from 0 to 9, it is | \D | 
+| /d | Digit| Digits: (lowercase d) Find all digits (number) from 0 to 9, it is | \D | 
+| /d | Digit| Digits: (lowercase d) Find all digits (number) from 0 to 9, it is | \D | 
+| /d | Digit| Digits: (lowercase d) Find all digits (number) from 0 to 9, it is | \D | 
+| /d | Digit| Digits: (lowercase d) Find all digits (number) from 0 to 9, it is | \D | 
+| /d | Digit| Digits: (lowercase d) Find all digits (number) from 0 to 9, it is | \D | 
+| /d | Digit| Digits: (lowercase d) Find all digits (number) from 0 to 9, it is | \D | 
+| /d | Digit| Digits: (lowercase d) Find all digits (number) from 0 to 9, it is | \D | 
+
 The delimiters: +, *, ?
 -----------
 
