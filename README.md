@@ -159,6 +159,53 @@ Predefined and built classes
 The delimiters: +, *, ?
 -----------
 
+ * '*' → Whether or not there is [Select all, operator greedy]
+
+
+ Example: 
+ ```
+ \d*[a-tA-T]
+```
+
+It reads: Select the character that is in the range from __a__ to __t__, (both lowercase and uppercase) and ALL the numbers that precede it, WHETHER THEY EXIST OR NOT.
+
+So, from the following example you will select
+
+
+~~12345T~~exto
+
+12345 ~~Te~~x~~to~~
+
+
+ * '+' →There is one or more [There must be]
+
+Example: 
+ ```
+\d+[a-tA-T]
+```
+
+
+It reads: Select the sequences of characters that contain AT LEAST ONE digit, followed by a character that is in the range from __a__ to __t__, (Both lowercase and uppercase).
+
+So from the following example you will select
+
+_12345T_ exto
+
+12345 _Te_ x _to_
+
+
+
+ * '?' →There is zero or one (There can be only one)
+
+Example: 
+ ```
+\d?[a-tA-T]
+```
+
+It reads: Select the sequences of characters THAT CONTAIN OR NOT, A SINGLE digit, followed by a character that is in the range from __a__ to __t__, (Both lowercase and uppercase).
+
+So from the following example you will select
+
 
 Counters {1,4}
 -----------
