@@ -148,13 +148,13 @@ Predefined and built classes
 | --- | --- | --- | --- |
 | . | Character | Any character, select each of the characters |  |
 | /d | Digit| Digits: (lowercase d) Find all digits (number) from 0 to 9, it is | \D | 
-| /d | Digit| Digits: (lowercase d) Find all digits (number) from 0 to 9, it is | \D | 
-| /d | Digit| Digits: (lowercase d) Find all digits (number) from 0 to 9, it is | \D | 
-| /d | Digit| Digits: (lowercase d) Find all digits (number) from 0 to 9, it is | \D | 
-| /d | Digit| Digits: (lowercase d) Find all digits (number) from 0 to 9, it is | \D | 
-| /d | Digit| Digits: (lowercase d) Find all digits (number) from 0 to 9, it is | \D | 
-| /d | Digit| Digits: (lowercase d) Find all digits (number) from 0 to 9, it is | \D | 
-| /d | Digit| Digits: (lowercase d) Find all digits (number) from 0 to 9, it is | \D | 
+| /w | Word| All word characters, Finds all the characters that are part of a word, both letters (lower or upper case) and numbers, it is equivalent to putting [a-zA-Z0-9_].| \W | 
+| /s | Space| WhiteSpaces, Finds all spaces (line breaks and tabs are also spaces). | \S | 
+| [0-9] | Specific Digit| Find all the digits from 0 to 9. |  | 
+| [0-9a-zA-Z] | Specific Word Character | Find all characters that are from 0-9 or that are uppercase or lowercase letters (\w) |  | 
+| [a-zA-Z]	 | | It will find us only the letters, both uppercase and lowercase. | | 
+| \	 | Diagonal invertida| Escapes characters, allows a special character to be displayed
+ |  | 
 
 The delimiters: +, *, ?
 -----------
