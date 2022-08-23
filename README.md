@@ -172,9 +172,9 @@ It reads: Select the character that is in the range from __a__ to __t__, (both l
 So, from the following example you will select
 
 
-~~12345T~~exto
+~~12345T exto
 
-12345 ~~Te~~x~~to~~
+12345~~Te~~x~~to~~
 
 
  * '+' →There is one or more [There must be]
@@ -189,7 +189,7 @@ It reads: Select the sequences of characters that contain AT LEAST ONE digit, fo
 
 So from the following example you will select
 
-_12345T_ exto
+~~12345T~~exto
 
 12345 _Te_ x _to_
 
@@ -206,6 +206,36 @@ It reads: Select the sequences of characters THAT CONTAIN OR NOT, A SINGLE digit
 
 So from the following example you will select
 
+
+1234~~5Te~~x~~to~~
+
+12345~~Te~~x~~to~~
+
+
+Complex example: \[[a-zA-Z]*:?@+[a-zA-Z]*\]
+
+It reads: Select the sequences of characters that:
+
+* Start with the special character [
+* They then contain, or not, a sequence of letters, both lowercase and uppercase.
+* They then contain, or not, a single character:
+* They then contain at least one @
+* They then contain, or not, a sequence of letters, both lowercase and uppercase.
+* End with the special character ]
+
+So from the following example you will select
+
+_[LOG ENTRY] [LOG] Everything is OK_
+
+_[LOG ENTRY] [LOG] [:@beco] Logged in_
+
+_[LOG ENTRY] [LOG] [USER:@beco] Clicked here_
+
+_[LOG ENTRY] [LOG] [user@@@@] Rated the app_
+
+_[LOG ENTRY] [LOG] [user:@beco] Logged out_
+
+_[LOG ENTRY] [LOG] [user:beco] test_
 
 Counters {1,4}
 -----------
