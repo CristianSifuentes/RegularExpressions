@@ -240,6 +240,36 @@ _[LOG ENTRY] [LOG] [user:beco] test_
 Counters {1,4}
 -----------
 
+* '{,}' → The «counters» or also known as quantifiers allow to specify the number of appearances that a character or pattern can have within a regular expression, the syntax to use is.
+
+Syntax for the use of metacharacters and quantifiers
+
+
+ Example: 
+ ```
+\d{lower bound, upper bound}
+```
+
+* Lower Dimension: Allows you to indicate the minimum number of appearances of a character or pattern.
+
+* Upper Dimension: Allows you to indicate the maximum number of appearances of a character or pattern, this dimension works together with the upper dimension which becomes a range of possible appearances.
+
+With the above established, we can continue on the path of salvation and continue with the evangelization of «evil regular expressions 😈», to understand the use of counters it is necessary to understand the following rules.
+
+
+* Counter {x}
+
+This option allows you to indicate an infinite range of incidents which will start from the number indicated in the lower bound.
+
+As shown in the example above, using the "{x,}" syntax does not care about issues that appear after the lower bound condition is met.
+
+
+
+* Counter {x,}
+
+* Counter {x,y}
+
+
 The case of (?) as a delimiter
 -----------
 
