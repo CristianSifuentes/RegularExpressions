@@ -263,12 +263,55 @@ This option allows you to indicate an infinite range of incidents which will sta
 
 As shown in the example above, using the "{x,}" syntax does not care about issues that appear after the lower bound condition is met.
 
+Expression
+ ```
+\d{2}
+```
+
+Text
+
+AB1
+
+AB~~89~~
+
 
 
 * Counter {x,}
 
+This option allows you to indicate an infinite range of incidents which will start from the number indicated in the lower bound.
+
+Expression
+ ```
+\d{2,}
+```
+
+~~1234567890~~
+
+~~1234567~~ui~~5678~~
+
+As shown in the example above, using the "{x,}" syntax does not care about issues that appear after the lower bound condition is met.
+
+
 * Counter {x,y}
 
+
+This option uses the lower bound (x) as the upper bound (y) this allows to indicate a range of appearances of a character or pattern which can be translated as “between “x” and “y” times” this notation is the most common that the community is run.
+
+
+Expression
+ ```
+\d{2,5}
+```
+~~1~~
+~~12~~
+~~123~~
+~~1234~~
+~~12345~~
+~~12345~~6
+
+
+
+As shown in the previous example, we can use the 2 dimensions which allow us to establish the range of possible appearances of a character or pattern. If we compare this with the previous variant, we can see that in this case there is a limitation.
 
 The case of (?) as a delimiter
 -----------
