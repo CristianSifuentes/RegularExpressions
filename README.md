@@ -237,7 +237,7 @@ _[LOG ENTRY] [LOG] [user:@beco] Logged out_
 
 _[LOG ENTRY] [LOG] [user:beco] test_
 
-Counters {1,4}
+Counters
 -----------
 
 * '{,}' → The «counters» or also known as quantifiers allow to specify the number of appearances that a character or pattern can have within a regular expression, the syntax to use is.
@@ -316,15 +316,40 @@ As shown in the previous example, we can use the 2 dimensions which allow us to 
 The case of (?) as a delimiter
 -----------
 
+the character ? is a delimiter when preceded by +, to find the smallest possible occurrence. If it does not have the plus, it is no longer a delimiter but a zero-once-occurrence symbol.
+
+Uses of ?
+
+* To express that there may or may not be a certain character example: \d[a-zA-z]? (Indicates search for a digit and then there may or may not be a letter)
+
+* As a delimiter, ie; search for the smallest possible groups according to the given condition example: \d\d+? (Look for subgroups of two numbers)
+
+
 Not (^), its use and its dangers
 -----------
+
+The ^ sign is called: Circumflex accent
+
+This only serves as a negation if it is inside a [ ]
 
 Challenge: Filtering out letters in phone numbers using negations
 -----------
 
+Expression
+ ```
+(\d{2}\W?){3}
+```
+
 
 Beginning (^) and end of line ($)
 -----------
+
+the ^ is used to indicate the beginning of a line
+the $ is used to indicate end of line
+
+^ ------------- $
+
+Note: The match is an entire line or it is discarded
 
 Practical use of Regular Expressions
 ============
