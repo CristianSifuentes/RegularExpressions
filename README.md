@@ -668,3 +668,19 @@ JavaScript
 
 grep and find from console
 -----------
+
+* grep = help to search within the files, pointual texts.
+* find = used to find files on a particular desktop.
+
+with:
+
+- Distributor ID: Ubuntu
+- Description: Ubuntu 20.04.3 LTS
+- Release: 20.04
+- Codename: focal
+
+```bash
+
+cat PartidosFutbol.csv | grep ,3\[0-9],
+
+```
