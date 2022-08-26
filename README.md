@@ -357,6 +357,31 @@ Practical use of Regular Expressions
 
 Logs
 -----------
+
+* To find IP addresses:
+
+Expression
+ ```
+(\d{1,3}\.){3,3}(\d{1,3})
+
+```
+
+* To find lines about HTTP methods:
+
+Expression
+ ```
+(\d{1,3}\.){3,3}(\d{1,3})
+
+```
+
+* To search for lines with arrows in the format of(number)/month(name)/year(number):
+
+Expression
+
+ ```
+^.*(\d{1,2}\/\w+\/\d{4,4}).*$
+```
+
 Phone
 -----------
 Urls
