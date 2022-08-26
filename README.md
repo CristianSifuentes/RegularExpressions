@@ -416,23 +416,255 @@ Project Explanation
 Perl
 -----------
 
+
+ ```Perl
+$ cat parsea.pl
+#!/usr/bin/perl
+
+
+use warnings;
+my $t = time;
+$match = 0;
+$nomatch = 0;
+
+
+
+open (CMD,"./result.csv");
+
+
+while ($line = <CMD>) {
+        if ($line =~ /^(\d+\-\d+\-\d+),(.*),(.*),(\d+),(\d+),(.*),(.*),(.*),(TRUE|FALSE)/) {
+                $date=$1;
+                $home_team=$2;
+                $away_team=$3;
+                $home_score=$4;
+                $away_score=$5;
+                $tournament=$6;
+                $city=$7;
+                $country=$8;
+                $neutral=$9;
+                if ($home_score > $away_score) {
+                        $year = $date;
+                        $year =~ s/(\d+)\-\d+\-\d+/$1/;
+                        print "$year - $home_team ($home_score) - $away_team ($away_score)\n";
+                }
+                #print "*$line";
+                $match++;
+        } else {
+                #print $line;
+                $nomatch++;
+        }
+
+
+}
+
+print "se encontraron $match\n";
+print "no se encontraron $nomatch\n";
+print "tardo:".(time()-$t)."\n";
+
+```
+
+this part is very interesting:
+
+
+```Perl
+$year =~ s/(\d+)\-\d+\-\d+/$1/;
+```
+uso una expresion regular para extraer el año
+
 Php
 -----------
+
+
+Match for regular expressions in PHP:
+
+```Php
+preg_match( '/regex/',
+		$line,
+		$m)
+```
+
+where:
+
+* regex: is the regular expression.
+
+* $line: string of characters (each line of the file).
+
+* $m: array where each match will go in each of the places. In the script, this array has two elements where element [0] is the test string and element [1] is the group of characters to match.
+
+* Regular expression to get games played in January 2018:
+
+```bash
+^2018\-01\-(\d\d),.*$
+
+```
+
+Code
+
+```Php
+<?php
+$file = fopen("../files/results.csv","r");
+
+$match   = 0;
+$nomatch = 0;
+
+while(!feof($file)) {
+    $line = fgets($file);
+    if(preg_match(
+        '/^2018\-01\-(\d\d),.*$/',
+        $line,
+        $m
+      )
+    ) {
+        print_r($m); 
+        $match++;
+    } else {
+        $nomatch++;
+    }
+}
+fclose($file);
+
+printf("\n\nmatch: %d\nnomatch: %d\n", $match, $nomatch);
+```
 
 Using PHP in practice
 -----------
 
+```Php
+<?php
+$t = time();
+$file = fopen("../results.csv", "r");
+$match = 0;
+$nomatch = 0;
+
+while(!feof($file)) {
+  $line = fgets($file);
+  // 1910-04-10,Netherlands,Belgium,7,0,Friendly,Haarlem,Netherlands,FALSE
+  if(preg_match('/^(\d{4,4}\-\d{2,2}\-\d{2,2}).*?,(.*?),(.*?),(\d+),(\d+),.*$/', $line, $m)) {
+    if($m[5] > $m[4]) {
+      printf("(%s) - %s (%d) - (%d) %s\n",$m[1], $m[2], $m[4], $m[5], $m[3]);
+      $match++;
+    } else {
+      $nomatch++;
+    }
+  } 
+}
+
+fclose($file);
+printf("Para los equipos como visitantes se encontraron\n - %d ganados \n - %d perdidos\n", $match, $nomatch);
+printf("Tiempo en ejecutar: %d segundos\n", time()-$t);
+```
+
+
 Python
 -----------
+
+```Python
+import re #Traemos las expresiones regulares
+"""
+date,home_team,away_team,home_score,away_score,tournament,city,country,neutral
+1872-11-30,Scotland,England,0,0,Friendly,Glasgow,Scotland,FALSE
+"""
+pattern = re.compile(r'^([\d]{4,4})\-\d\d-\d\d,(.+),(.+),(\d+),(\d+),.*$')
+
+f = open("./results.csv", "r")
+
+for line in f:
+  res = re.match(pattern, line)
+  if res:
+    total = int(res.group(4)) + int(res.group(5))
+    if total > 20:
+      print(f"Goles: {total} - Fecha:{res.group(1)} | {res.group(2)} [{res.group(4)}] -{res.group(3)} [{res.group(5)}]")
+
+f.close()
+
+
+```
 
 Java
 -----------
 
+```Java
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class regex {
+public static void main(String[] args) {
+String file = “./results.csv”;
+
+      try {
+            BufferedReader br = new BufferedReader(new FileReader(file));
+            String line;
+            while((line = br.readLine()) != null) {
+                  System.out.println(line);
+            }
+      } catch (Exception e) {
+            System.out.println("nope!");
+      }
+
+      } 
+
+}
+
+```
+
 Java Applied
 -----------
 
+```Java
+public static void main(String[] args) {
+      String file = "SoccerScores.csv";
+      // 1877-03-05,Wales,Scotland,0,2,Friendly,Wrexham,Wales,FALSE
+      Pattern pat = Pattern.
+          compile("^(18\\d\\d\\-.*),(.*),(.*),(\\d+),(\\d+),([\\w\\s]+),.*$");
+            //Se usa doble diagonal para escaparla del string.
+      try{
+        BufferedReader br = new BufferedReader(new FileReader(file));
+        String line;
+        while((line = br.readLine()) != null){
+          Matcher matcher = pat.matcher(line);
+          if(matcher.find()){
+            System.out.println("Fecha: " + matcher.group(1));
+            System.out.println(matcher.group(2) + " (" + matcher.group(4)+" - "
+                            + matcher.group(5)
+                            + ") " + matcher.group(3) );
+            System.out.println("Torneo: " + matcher.group(6));
+            System.out.println("-------------------------------------------------------------\n");
+          }
+        }
+      }catch(Exception e){
+        System.out.println("Error");
+      }
+  }
+
+```
+
 JavaScript
 -----------
+
+```HTML
+<html>
+    <header>
+        <script>
+            functionvalidate(str){
+                if(str.match(/^\w{3,}@[\w\.]{2,}\.\w{2,5}$/)){
+                    console.log(str)
+                    document.getElementById('fldMail').style.backgroundColor = 'lightblue'
+                }else {
+                    console.log('formato de correo incorrecto: ', str)
+                    document.getElementById('fldMail').style.backgroundColor = 'salmon'
+                }
+            }
+        </script>
+    </header>
+    <body>
+        <inputtype="email"onkeyup="validate(this.value)"id="fldMail">
+    </body>
+</html>
+
+```
 
 grep and find from console
 -----------
