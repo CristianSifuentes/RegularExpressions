@@ -550,6 +550,43 @@ words.
 Names(?) Challenge
 -----------
 
+```
+Camilo Sarmiento Gálvez
+Alejandro Pliego Abasto
+Milagros Reyes Japón
+Samuel París Arrabal
+Juan Pablo Tafalla
+Axel Gálvez Velázquez
+Óscar Montreal Aparicio
+Jacobo Pozo Tassis
+Guillermo Ordóñez Espiga
+Eduardo Pousa Curbelo
+Ivanna Bienvenida Kevin
+Ada Tasis López
+Luciana Sáenz García
+Florencia Sainz Márquz
+Catarina Cazalla Lombarda
+Paloma Gallo Perro
+Margarita Quesada Florez
+Vicente Fox Quesada
+Iris Graciani
+Asunción Carballar
+Constanza Muñoz
+Manuel Andres García Márquez
+```
+
+solution 1
+
+```
+^([A-Z][a-z]{1,}\s?){2,}.*$
+
+```
+
+```
+[A-ZÀ-ú][a-zÀ-ú]+ [A-ZÀ-ú][a-zÀ-ú]+(( [A-ZÀ-ú][a-zÀ-ú]+){1,})?
+
+```
+
 
 
 Advanced uses in Regular Expressions
