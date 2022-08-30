@@ -33,14 +33,19 @@
 )   
       * [Logs
 ](#logs) 
+
       * [Phone
 ](#phone) 
+
       * [Urls
 ](#urls) 
+
       * [Emails
 ](#emails) 
+
       * [Locations
 ](#locations) 
+
       * [Names(?) Challenge
 ](#names-challenge) 
 
@@ -384,8 +389,98 @@ Expression
 
 Phone
 -----------
+
+After thinking for a while I came to this regular expression:
+
+```
+^(\+\d\d)?(\d[\-\. ]?){6,6}([#pe]\d{3,3})?$
+```
+
+Where:
+
+```
+(\+\d\d)?
+```
+
+It is ensured that the “+” sign, if it comes, is accompanied by 2 digits.
+
+```
+(\d[\-\. ]?){6,6}
+```
+
+They are the 6 digits of the phone number (you can change the number of digits allowed, of course). This allows numbers like “2 1 5 3 12”, “2-11-32-1” or “3.40 2-2 4”.
+
+And finally
+
+```
+([#pe]\d{3,3})?
+```
+
+It is ensured that if the sign "#" or letter "p" or "e" comes, it is accompanied by 3 digits, otherwise the number will not be valid
+
+I hope this example has been useful to you to see the solution of the exercise from another point of view, greetings.
+
 Urls
 -----------
+
+Urls:
+
+```
+url: https://www.instagram.com/p/BXB4zsUlW5Z/?taken-by=beco.mx
+url: http://instagram.com/p/blablablah
+url: http://itam.mx/test
+http://instagram.com/p/blablablah
+https://www.vanguarsoft.com.ve
+http://platzi.com
+https://traetelo.net
+https://traetelo.net/images archivo.jsp
+url: https://subdominio.traetelo.net
+url: https://www.instagram.com/p/BXB4zsUlW5Z/?taken-by=beco.mx
+url: http://instagram.com/p/blablablah
+url: http://itam.mx/test
+http://instagram.com/p/blablablah
+https://www.google.com.co/
+https://sub.dominio.de.alguien.com/archivo.html
+https://en.wikipedia.org/wiki/.org
+https://cdn-microsoft.org/image/seixo2t9sjl_22.jpg
+https://hola.pizza
+https://platzi.com/clases/1301-expresiones-regulares/11860-urls9102/ clase
+
+
+https://api.giphy.com/v1/gifs/search?q=Rick and Morty&limit=10&api_key=DG3hItPp5HIRNC0nit3AOR7eQZAe
+
+http://localhost:3000/something?color1=red&color2=blue
+http://localhost:3000/display/post?size=small
+ http://localhost:3000/?name=satyam
+ http://localhost:3000/scanned?orderid=234
+ http://localhost:3000/getUsers?userId=12354411&name=Billy
+ http://localhost:3000/getUsers?userId=12354411
+http://localhost:3000/search?city=Barcelona
+
+www.sitiodeejemplo.net/pagina.php?nombredevalor1=valor1&nombredevalor2=valor2
+
+```
+
+Url to TLD
+
+
+```
+([#pe]\d{3,3})?
+```
+
+Full URL
+
+```
+([#pe]\d{3,3})?
+```
+
+Querystring
+
+```
+([#pe]\d{3,3})?
+```
+
+
 Emails
 -----------
 Locations
