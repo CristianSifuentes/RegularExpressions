@@ -465,24 +465,60 @@ Url to TLD
 
 
 ```
-([#pe]\d{3,3})?
+https?:\/\/[\w\-\.]+\.\w{2,5}
 ```
 
 Full URL
 
 ```
-([#pe]\d{3,3})?
+https?:\/\/[\w\-\.]+\.\w{2,5}\/?\S* 
+
 ```
 
 Querystring
 
 ```
-([#pe]\d{3,3})?
+\?\w+-?=.*&?\S$
+
 ```
 
 
 Emails
 -----------
+
+E-mail:
+
+```
+esto.es.un.mail+gmail@mail.com
+esto.es_un.mail@mail.com
+esto.es_un.mail+complejo@mail.com
+dominio.com
+rodrigo.jimenez@yahoo.com.mx
+ruben@starbucks.com
+esto_no$es_email@dominio.com
+no_se_de_internet3@hotmail.com
+
+```
+
+Pattern:
+
+```
+[\w\._]{5,30}\+?\w{0,10}@[\w\-\.]{3,}\.\w{2,5}
+```
+
+Explanation:
+
+
+* [\w\._]{5,30} => containing from 5 to 30 alphanumeric characters including _ and the .
+* \+? => can contain a +
+* \w{0,10} => containing 0 to 10 alphanumeric characters
+* @ => containing an @
+* [\w\-\.]{3,} => containing 3 or more alphanumeric characters including _ and the .
+* \. => containing a .
+* \w{2,5} => containing from 2 to 5
+
+
+
 Locations
 -----------
 Names(?) Challenge
