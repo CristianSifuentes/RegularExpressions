@@ -521,6 +521,32 @@ Explanation:
 
 Locations
 -----------
+
+Example 1:
+
+```
+^-?\d{1,3}\.\d{1,6},\s?-?\d{1,3}\.\d{1,6},.*$
+
+```
+
+
+Example 2:
+
+```
+^-?\d{1,3}\s\d{1,2}' \d{1,2}\.\d{2,2}"[WE],\s?-?\d{1,3}\s\d{1,2}' \d{1,2}\.\d{2,2}"[SN]$
+```
+
+Example 3:
+
+Regarding the third example, I had to make a small modification, since the page
+It shows me Spanish words with accents, so I added them as possibilities inside
+words.
+
+```
+^[a-záéíóú]{3,}\.[a-záéíóú]{3,}\.[a-záéíóú]+$
+```
+
+
 Names(?) Challenge
 -----------
 
