@@ -11,7 +11,7 @@
    * [The language: characters, operators, and constructions
 ](#the-language-characters-operators-and-constructions
 )  
-      * [The character (.)](#the-character.) 
+      * [The character (.)](#the-character) 
       * [Predefined and built classes
 ](#predefined-and-built-classes) 
       * [The delimiters: +, *, ?
@@ -19,7 +19,7 @@
       * [Counters {1,4}
 ](#counters)
       * [The case of (?) as a delimiter
-](#the-case-of-as-a-delimiter)
+](#the-case-of-?-as-a-delimiter)
       * [Not (^), its use and its dangers
 ](#not-its-use-and-its-dangers)
       * [Challenge: Filtering out letters in phone numbers using negations
@@ -138,7 +138,6 @@ The language: characters, operators, and constructions
 The character .
 -----------
 
-The character (.)
 
 Text file. Series of character strings. A succession of lines.
 
@@ -318,7 +317,7 @@ Expression
 
 As shown in the previous example, we can use the 2 dimensions which allow us to establish the range of possible appearances of a character or pattern. If we compare this with the previous variant, we can see that in this case there is a limitation.
 
-The case of (?) as a delimiter
+The case of ? as a delimiter
 -----------
 
 the character ? is a delimiter when preceded by +, to find the smallest possible occurrence. If it does not have the plus, it is no longer a delimiter but a zero-once-occurrence symbol.
@@ -521,8 +520,71 @@ Explanation:
 
 Locations
 -----------
+
+Example 1:
+
+```
+^-?\d{1,3}\.\d{1,6},\s?-?\d{1,3}\.\d{1,6},.*$
+
+```
+
+
+Example 2:
+
+```
+^-?\d{1,3}\s\d{1,2}' \d{1,2}\.\d{2,2}"[WE],\s?-?\d{1,3}\s\d{1,2}' \d{1,2}\.\d{2,2}"[SN]$
+```
+
+Example 3:
+
+Regarding the third example, I had to make a small modification, since the page
+It shows me Spanish words with accents, so I added them as possibilities inside
+words.
+
+```
+^[a-záéíóú]{3,}\.[a-záéíóú]{3,}\.[a-záéíóú]+$
+```
+
+
 Names(?) Challenge
 -----------
+
+```
+Camilo Sarmiento Gálvez
+Alejandro Pliego Abasto
+Milagros Reyes Japón
+Samuel París Arrabal
+Juan Pablo Tafalla
+Axel Gálvez Velázquez
+Óscar Montreal Aparicio
+Jacobo Pozo Tassis
+Guillermo Ordóñez Espiga
+Eduardo Pousa Curbelo
+Ivanna Bienvenida Kevin
+Ada Tasis López
+Luciana Sáenz García
+Florencia Sainz Márquz
+Catarina Cazalla Lombarda
+Paloma Gallo Perro
+Margarita Quesada Florez
+Vicente Fox Quesada
+Iris Graciani
+Asunción Carballar
+Constanza Muñoz
+Manuel Andres García Márquez
+```
+
+solution 1
+
+```
+^([A-Z][a-z]{1,}\s?){2,}.*$
+
+```
+
+```
+[A-ZÀ-ú][a-zÀ-ú]+ [A-ZÀ-ú][a-zÀ-ú]+(( [A-ZÀ-ú][a-zÀ-ú]+){1,})?
+
+```
 
 
 
